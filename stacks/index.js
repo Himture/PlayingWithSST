@@ -1,4 +1,5 @@
-import { storageStack } from "./StorageStack"
+import { StorageStack } from "./StorageStack"
+import { ApiStack } from "./ApiStack";
 
 export default function main(app) {
   
@@ -10,5 +11,5 @@ export default function main(app) {
     },
   });
 
-  app.stack(storageStack)
+  app.stack(StorageStack).stack(ApiStack);
 }
